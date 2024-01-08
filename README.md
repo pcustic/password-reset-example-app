@@ -2,7 +2,7 @@
 
 This is a simple and very basic application written in Python (Flask framework) that is meant
 to show how to implement the password reset via email feature that is commonly used 
-across web (and other) applications.
+across web applications.
 
 It is heavily influenced by Miguel Grinberg's [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
 If you are working with Flask and haven't stumbled across Miguel's blog go ahead and check it out
@@ -11,8 +11,8 @@ places to learn Flask.
 
 
 ## Features of the app
-As already mentioned, this is very basic app with no fancy frontend, just Python (Flask) and some 
-HTML. It's sole purpose is to showcase one idea how to implement password reset flow in Flask.
+As already mentioned, this is a very basic app with no fancy frontend, just Python (Flask) and some 
+HTML. Its sole purpose is to showcase one idea how to implement password reset flow in Flask.
 You can register, log-in and reset your password while logged out.
 It uses email to send out URL that redirects user to a page for creating new password.
 
@@ -37,7 +37,7 @@ I said it is very basic :)
 
 ### Requirements
 I have used Python 3.11.5 while I was writing this app, however it should work 
-on lower versions too (you will only maybe have issues in regard to typing with
+on few lower versions too (you will only maybe have issues in regard to typing with
 lower versions of Python).
 
 Other requirements are listed in `requirements.txt` file.
@@ -75,7 +75,7 @@ export DATABASE_URL=postgresql://user:secret@localhost
 
 By the way, other configuration is set up in the file [config.py](config.py).
 
-Okay, so after you have set up (or not) the database you can run the migrations. 
+After you have set up (or not) the database you can run the migrations. 
 Migrations are handled using [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/) 
 that uses [Alembic](https://alembic.sqlalchemy.org/en/latest/) in the background but 
 makes it a bit easier to use in Flask applications. 
@@ -89,7 +89,7 @@ flask db upgrade
 
 ### Setting up the email manager
 
-Only thing to do now is to set up email manager. To have the full email sending 
+Only thing to do left is to set up email manager. To have the full email sending 
 functionality you need to either set up an SMTP server or have some third party service
 for email delivery, like Mailtrap or Sendgrid. Some services also provide sandboxes
 where you can use the actual service but instead the mails end up
@@ -145,4 +145,4 @@ Well, to be honest, that are the only things that you can do actually :D
 ## Final notes
 This application is written only for educational purposes and is not meant to be 
 deployed to production without changes. Feel free to use it on your own risk since there
-might be some issues and bugs I am not aware. 
+might be some issues and bugs that I am not aware of. 
