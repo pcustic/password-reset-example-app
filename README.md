@@ -33,3 +33,26 @@ I said it is very basic :)
 
 ## Running the app
 
+### Requirements
+I have used Python 3.11.5 while I was writing this app, however it should work 
+on lower versions too (you will only maybe have issues in regard to typing with
+lower versions of Python).
+
+Other requirements are listed in `requirements.txt` file.
+
+I suggest using Python's [virtual environments](https://docs.python.org/3/library/venv.html) to isolate your Python packages.
+
+### Setting up and installation
+Clone this repository and enter the directory. Then, create new virtual environment there
+and activate it. This is not necessary but recommended.
+
+```shell
+python -m venv venv
+source venv/bin/activate
+```
+
+Then install the requirements:
+```shell
+pip install -r requirements.txt
+```
+

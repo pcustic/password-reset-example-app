@@ -4,7 +4,7 @@ from sqlalchemy import select
 from flask_login import current_user, login_user, logout_user
 from flask_mailman import EmailMessage
 
-from app import db, email
+from app import db
 from app.models import User
 from app.auth import bp
 from app.auth.forms import (

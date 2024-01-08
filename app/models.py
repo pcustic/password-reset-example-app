@@ -33,7 +33,7 @@ class User(UserMixin, db.Model):
         return serializer.dumps(self.email, salt=self.password_hash)
 
     @staticmethod
-    def validate_reset_password_token(token: str, user_id: int) -> User | None:
+    def validate_reset_password_token(token: str, user_id: int):
         # Check if there exists a user with this id.
         user = db.session.get(User, user_id)
 
