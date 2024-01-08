@@ -25,6 +25,8 @@ HTML. It's sole purpose is to showcase one idea how to implement password reset 
 
 ![Login page](/docs_screenshots/login.jpg)
 
+<img src="/docs_screenshots/login.jpg" alt="Login page" width="200">
+
 ![Reset password request](/docs_screenshots/reset_password_request.jpg)
 
 ![Successful password reset](/docs_screenshots/reset_password_success.jpg)
