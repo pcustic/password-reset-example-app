@@ -23,12 +23,13 @@ HTML. It's sole purpose is to showcase one idea how to implement password reset 
 
 ### Some screenshots of the app:
 
-![Login page](/docs_screenshots/login.jpg)
-
+Login:
 <img src="/docs_screenshots/login.jpg" alt="Login page" width="200">
 
-![Reset password request](/docs_screenshots/reset_password_request.jpg)
+Password reset request:
+<img src="/docs_screenshots/reset_password_request.jpg" alt="Reset password request" width="200">
 
-![Successful password reset](/docs_screenshots/reset_password_success.jpg)
+Password reset success:
+<img src="/docs_screenshots/reset_password_success.jpg" alt="Successful password reset" width="200">
 
 
