@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <p>Hello {{ current_user.email }} </p>
+    <p>This view is only for logged-in users.</p>
+
+    <a href="{{ url_for('main.index') }}">Home</a>
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+
+{% endblock %}

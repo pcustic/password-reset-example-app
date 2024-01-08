@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }}</title>
+      {% else %}
+      <title>Welcome to Password Reset Example App</title>
+      {% endif %}
+    </head>
+    <body>
+        {% if title %}
+          <h1>{{ title }}</h1>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </body>
+</html>

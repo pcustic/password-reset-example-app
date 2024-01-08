@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+            {% for error in form.email.errors %}
+                <p style="color: red;">{{ error }}</p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}
+            {% for error in form.password.errors %}
+                <p style="color: red;">{{ error }}</p>
+            {% endfor %}
+        </p>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                 <p style="color: red;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    <p>Go back <a href="{{ url_for('main.index') }}">home</a>.</p>
+
+{% endblock %}

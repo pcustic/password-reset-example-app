@@ -1,3 +1,4 @@
+reset_password_email_html_content = """
 <p>Hello,</p>
 <p>You are receiving this email because you requested a password reset for your account.</p>
 <p>
@@ -12,3 +13,4 @@
 <p>
     Thank you!
 </p>
+"""

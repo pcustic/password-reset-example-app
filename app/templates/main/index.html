@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+             <p>{{ message }}</p>
+            {% endfor %}
+        {% else %}
+            <p>This is a home page. It is open to everyone.</p>
+        {% endif %}
+    {% endwith %}
+
+    {% if current_user.is_authenticated %}
+        <div>
+            <span>
+                <a href="{{ url_for('main.protected') }}">Protected view</a>
+                <a href="{{ url_for('auth.logout') }}">Logout</a>
+            </span>
+        </div>
+    {% else %}
+        <div>
+            <span>
+                <a href="{{ url_for('auth.login') }}">Login</a>
+                <a href="{{ url_for('auth.register') }}">Register</a>
+                <a href="{{ url_for('auth.reset_password_request') }}">Reset password</a>
+                <a href="{{ url_for('main.protected') }}">Protected view</a>
+            </span>
+        </div>
+    {% endif %}
+
+{% endblock %}
