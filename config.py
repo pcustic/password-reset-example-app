@@ -23,4 +23,3 @@ class Config:
     MAIL_DEFAULT_SENDER = (
         os.environ.get("MAIL_DEFAULT_SENDER") or "do-not-reply@pass-reset-example.com"
     )
-    # MAIL_BACKEND = "console"
