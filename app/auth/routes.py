@@ -100,7 +100,10 @@ def reset_password_request():
         if user:
             send_reset_password_email(user)
 
-        flash("Instructions to reset your password were sent to your email address.")
+        flash(
+            "Instructions to reset your password were sent to your email address,"
+            " if it exists in our system."
+        )
 
         return redirect(url_for("auth.reset_password_request"))
 
@@ -116,7 +119,9 @@ def reset_password(token, user_id):
 
     user = User.validate_reset_password_token(token, user_id)
     if not user:
-        return redirect(url_for("main.index"))
+        return render_template(
+            "auth/reset_password_error.html", title="Reset Password error"
+        )
 
     form = ResetPasswordForm()
     if form.validate_on_submit():
